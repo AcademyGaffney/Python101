@@ -12,6 +12,7 @@ petstore.append(p.Bird(90, "CAW"))
 for pet in petstore:
     print(pet.speak())
 
+
 def bird_stats(petlist):
     birds = 0
     wings = 0
