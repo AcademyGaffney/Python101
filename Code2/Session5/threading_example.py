@@ -8,18 +8,20 @@ import time
 def print_cube(num):
     # function to print cubes from 0 to num
     for i in range(num+1):
+        time.sleep(.1)
         print("Cube: {}".format(i * i * i))
 
 
 def print_square(num):
     # function to print square from 0 to num
     for i in range(num+1):
+        time.sleep(.12)
         print("Square: {}".format(i * i))
 
 
 if __name__ == "__main__":
     # creating thread
-    t1 = threading.Thread(target=print_square, args=(10,))
+    t1 = threading.Thread(target=print_cube, args=(10,))
     t2 = threading.Thread(target=print_square, args=(10,))
 
     # starting thread 1
