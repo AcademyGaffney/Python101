@@ -36,6 +36,7 @@ class PupperDB:
         try:
             cursor = self.Connect.cursor()
             cursor.execute(stmt.format(*values))
+            cursor.close()
         except MYSQL.Error as e:
             self.Connect.rollback()
             print(str(e))
