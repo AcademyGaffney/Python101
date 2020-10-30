@@ -50,7 +50,7 @@ class Point:
         xQuot = self.__x / other.__x
         yQuot = self.__y / other.__y
         if xQuot < 1:
-            xQuot = 1 / xQuotS
+            xQuot = 1 / xQuot
         if yQuot < 1:
             yQuot = 1 / yQuot
         return xQuot < 1.000000000001 and yQuot < 1.000000000001
