@@ -26,5 +26,19 @@ twoDA = oneDArray.reshape(3,5)
 print(twoDA)
 print(twoDArray.reshape(-1))
 
-print(np.concatenate((twoDArray, twoDArray), axis=0))
+print(np.concatenate((twoDArray, twoDArray), axis=1))
 
+a, b, c = np.split(oneDArray, 3)
+print(a)
+print(b)
+print(c)
+
+#This is a ternary/conditional operator performed on each element in an array
+print(np.where(oneDArray % 2 == 1, oneDArray, 2*oneDArray))
+
+randArr1 = np.random.randint(100, size=(4,3,2))
+print(randArr1)
+
+print(np.sort(np.random.choice([1,2,3,4], p=(.3, .2, .1, .4), size = 100)))
+
+print(np.sort(np.random.normal(loc = 5, scale = 1, size=(50))))
