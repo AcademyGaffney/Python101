@@ -17,8 +17,14 @@ print(oneDArray[3])
 print(twoDArray[1][2])
 print(twoDArray[:2])
 
+
+# Create a 3x5 array out of our 15 element array
+# reshape(3,-1) will do the same, making the second dimension
+# whatever size it needs to be
 twoDA = oneDArray.reshape(3,5)
 
 print(twoDA)
 print(twoDArray.reshape(-1))
+
+print(np.concatenate((twoDArray, twoDArray), axis=0))
 
